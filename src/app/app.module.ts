@@ -10,6 +10,7 @@ import { UserService } from "./_service/user.service";
 import { HomeComponent } from "./home/home.component";
 import { HeaderService } from "./_service/header.service";
 import { RouterModule, Routes } from "@angular/router";
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -32,7 +33,8 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     RegistrationComponent,
-    HomeComponent
+    HomeComponent,
+    UserDashboardComponent
   ],
   bootstrap: [AppComponent],
   providers: [UserService, HeaderService]

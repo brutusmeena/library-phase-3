@@ -8,7 +8,7 @@ import { HeaderService } from "./_service/header.service";
 })
 export class AppComponent {
   name = "library project ";
-  loginPage: boolean = true;
+  loginPage: boolean = false;
   userPage: boolean = false;
   adminPage: boolean = false;
 
@@ -26,7 +26,5 @@ export class AppComponent {
     });
   }
 
-  ngOnInit() {
-    this._header.loginPage.next(true);
-  }
+  ngOnInit() {}
 }

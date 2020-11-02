@@ -1,3 +1,129 @@
-<p>
-registration works!
-</p>
+<br><br><br>
+
+<div class="page-area">
+
+	<div class="row justify-content-center ">
+		<div class="col-md-6 bg-white rounded shadow py-3">
+
+			<form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
+
+				<div class="form-group">
+					<label for="firstName">First Name</label>
+					<input
+              type="text"
+              class="form-control"
+              id="firstName"
+              placeholder="Enter Your First Name"
+              name="firstName"
+              [(ngModel)]="service.formData.FirstName"
+              #firstName=ngModel
+              required
+            />
+				</div>
+					<div class="form-group">
+						<label for="lastName">Last Name</label>
+						<input
+              type="text"
+              class="form-control"
+              id="lastName"
+              placeholder="Enter Your Last Name"
+              name="LastName"
+              [(ngModel)]="service.formData.LastName"
+              #LastName=ngModel
+              required
+            />
+				</div>
+
+						<div class="form-group">
+							<label for="username">Username</label>
+							<input
+              type="text"
+              class="form-control"
+              id="username"
+              placeholder="Enter Username"
+              name="username"
+              [(ngModel)]="service.formData.UserName"
+              #username=ngModel
+              required
+            />
+							<small *ngIf="userName">Your UserName is {{userName}}</small>
+						</div>
+
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Enter Password"
+              name="password"
+              [(ngModel)]="service.formData.Password"
+              #Password=ngModel
+              required
+            />
+				</div>
+
+							<div class="form-group">
+								<label for="email">Email</label>
+								<input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter Email"
+              name="email"
+              [(ngModel)]="service.formData.Email"
+              required
+              email
+              #email="ngModel"
+            />
+								<small class="text-danger" *ngIf="!email.valid && email.touched"
+              >Please Enter Valid Email</small>
+							</div>
+
+							<div class="form-group">
+								<label for="contactnumber">Contact Number</label>
+								<input
+              type="text"
+              class="form-control"
+              id="ContactNo"
+              placeholder="Enter Your Contact Number"
+              name="ContactNo"
+              [(ngModel)]="service.formData.ContactNo"
+              #ContactNo=ngModel
+              required
+            />
+				</div>
+
+
+								<div class="form-group">
+									<div class="custom-control custom-radio">
+										<h5>Are you admin ?</h5>
+										<input
+              type="radio"
+              name="AreYouAdmin"
+              [value]="true"
+              [(ngModel)]="service.formData.AreYouAdmin"
+              #AreYouAdmin=ngModel
+            />
+										<label
+              >Yes</label>
+										<br>
+										<input
+              type="radio"
+              name="AreYouAdmin"
+              [value]="false"
+              [(ngModel)]="service.formData.AreYouAdmin"
+              #AreYouAdmin=ngModel
+            />
+										<label
+              >No</label>
+									</div>
+								</div>
+
+								<button type="submit" class="btn btn-success">
+          Submit
+        </button>
+			</form>
+		</div>
+	</div>
+</div>
