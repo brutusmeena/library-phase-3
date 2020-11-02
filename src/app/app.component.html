@@ -1,0 +1,16 @@
+<header>
+	<div class="row justify-content-center ">
+		<nav>
+			<ul class="nav nav-tabs" *ngIf="loginPage">
+				<li class="nav-item"><a class="nav-link " routerLinkActive="active"
+						[routerLinkActiveOptions]="{exact:true}" routerLink="/">Home</a></li>
+				<li class="nav-item"><a class="nav-link " routerLinkActive="active" routerLink="/login">Login</a>
+				</li>
+				<li class="nav-item"><a class="nav-link " routerLinkActive="active"
+						routerLink="/registration">Registration</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<router-outlet></router-outlet>
